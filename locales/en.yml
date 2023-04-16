@@ -1,6 +1,16 @@
 view: View Problems
 exit: Exit
+back: Back
 search: Search
+problem-not_found: Problems not found
 search_problem: Search Problem
 more_info: More Info
+create_solution: Create Solution
 What do you want to do?: What do you want to do?
+name: name
+title: title
+difficulty: Difficulty
+full_score: Full Score
+total_submit: Total Submit
+total_accepted: Total Accepted
+value: Value
