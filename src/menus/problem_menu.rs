@@ -6,7 +6,7 @@ use rust_i18n::t;
 
 pub fn menu(problem: &LuoguProblem) {
     loop {
-        let options = vec![t!("create_solution"), t!("more_info"), t!("back")];
+        let options = vec![t!("create_solution"), t!("more_info"), t!("back"), t!("exit")];
         let ans = inquire::Select::new(t!("What do you want to do?").as_str(), options).prompt();
         match ans {
             Ok(choice) => {
@@ -30,6 +30,8 @@ pub fn menu(problem: &LuoguProblem) {
                     std::io::stdin().read_exact(buffer).unwrap();
                 } else if choice == t!("back") {
                     break;
+                } else if choice == t!("exit") {
+                    std::process::exit(0);
                 }
             }
             Err(_) => println!("There was an error, please try again"),
